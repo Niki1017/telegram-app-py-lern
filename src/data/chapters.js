@@ -115,5 +115,9 @@ print(students_sorted)
         `
       }
     ]
+  },
+  {
+    id: 2,
+    title: "Артем сигма",
   }
 ];
