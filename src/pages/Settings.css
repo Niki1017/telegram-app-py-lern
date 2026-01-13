@@ -1,0 +1,80 @@
+/* Settings.css */
+
+.settings {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--bg);
+  color: var(--text);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.settings h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--text);
+}
+
+.settings-block {
+  margin-top: 20px;
+}
+
+.settings-block h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--text);
+  padding-bottom: 5px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.radio input[type="radio"] {
+  accent-color: var(--by-theme-button-color);
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.radio span {
+  font-size: 1.1rem;
+}
+
+.radio:hover {
+  transform: scale(1.03);
+}
+
+/* Добавим плавное изменение цвета при наведении на светлой/тёмной теме */
+.radio:hover span {
+  color: var(--by-theme-button-color);
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 600px) {
+  .settings {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .settings h1 {
+    font-size: 1.6rem;
+  }
+
+  .settings-block h2 {
+    font-size: 1.3rem;
+  }
+
+  .radio span {
+    font-size: 1rem;
+  }
+}

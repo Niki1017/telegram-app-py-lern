@@ -1,0 +1,77 @@
+.chapter-page {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+}
+
+/* ===== TITLE ===== */
+.chapter-title {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 25px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 10px;
+}
+
+/* ===== SUBCHAPTER ===== */
+.subchapter {
+  margin-bottom: 30px;
+}
+
+.subchapter-title {
+  font-size: 1.35em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* ===== TEXT ===== */
+.subchapter-content p {
+  font-size: 1.05em;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+/* ===== CODE ===== */
+.code-block {
+  background-color: #1e1e1e;
+  color: #f8f8f2;
+  padding: 14px 16px;
+  border-radius: 8px;
+  margin: 12px 0;
+  overflow-x: auto;
+  font-size: 0.95em;
+}
+
+.code-block code {
+  font-family: "Fira Code", Consolas, monospace;
+}
+
+/* ===== BACK LINK ===== */
+.back-link {
+  display: inline-block;
+  margin: 20px 0;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== ADAPTIVE ===== */
+@media (max-width: 600px) {
+  .chapter-title {
+    font-size: 1.5em;
+  }
+
+  .subchapter-title {
+    font-size: 1.2em;
+  }
+}

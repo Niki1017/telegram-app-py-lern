@@ -1,0 +1,66 @@
+.about {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  color: var(--text);
+  background-color: var(--bg);
+  font-family: Arial, sans-serif;
+}
+
+.about-header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.about-header p {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.about-info h2 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.about-info p,
+.about-info ul {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.about-info p {
+    font-size: 1.1em;
+}
+
+.about-info ul {
+  padding-left: 20px;       /* отступ слева для маркеров */
+  margin-bottom: 10px;
+  list-style-type: disc;    /* явно задаём буллеты */
+  list-style-position: outside; /* буллеты слева от текста */
+}
+
+.about-info ul li {
+  margin-bottom: 8px;
+}
+.about-info a {
+  color: #0088cc;
+  text-decoration: none;
+}
+
+.about-info a:hover {
+  text-decoration: underline;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 600px) {
+  .about-header h1 {
+    font-size: 1.5em;
+  }
+
+  .about-info h2 {
+    font-size: 1.2em;
+  }
+}
