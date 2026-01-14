@@ -1,12 +1,28 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { chapters } from "../data/chapters";
 
 import "./ChapterPage.css";
 
 function ChapterPage() {
   const { id } = useParams();
+  const location = useLocation();
 
   const chapter = chapters.find(ch => String(ch.id) === id);
+
+  useEffect(() => {
+    // Плавная прокрутка к подглаве, если указан хэш в URL
+    if (location.hash) {
+      const anchor = location.hash.replace("#", "");
+      const element = document.getElementById(anchor);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    } else {
+      // Если хэш не указан, прокрутка в начало страницы
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [location]);
 
   if (!chapter) return <p>Глава не найдена</p>;
 
@@ -16,8 +32,8 @@ function ChapterPage() {
         {chapter.id}. {chapter.title}
       </h1>
 
-      {chapter.subchapters.map(sub => (
-        <section key={sub.id} className="subchapter">
+      {chapter.subchapters?.map(sub => (
+        <section key={sub.id} id={sub.id} className="subchapter">
           <h2 className="subchapter-title">
             {sub.id} {sub.title}
           </h2>

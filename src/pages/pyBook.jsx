@@ -45,8 +45,7 @@ function PyBook() {
         {filteredChapters.length > 0 ? (
           filteredChapters.map(ch => (
             <li key={ch.id} className="chapter-item">
-
-              {/* КЛИК ПО ГЛАВЕ */}
+              {/* Ссылка на главу */}
               <Link
                 to={`/chapter/${ch.id}`}
                 className="chapter-link"
@@ -54,19 +53,21 @@ function PyBook() {
                 {ch.id}. {ch.title}
               </Link>
 
-              {/* ПОДГЛАВЫ */}
+              {/* Подглавы */}
               {ch.subchapters?.length > 0 && (
                 <ul className="subchapter-list">
                   {ch.subchapters.map(sub => (
                     <li key={sub.id} className="subchapter-item">
-                      <Link to={`/chapter/${ch.id}#${sub.id}`} className="subchapter-link">
+                      <Link
+                        to={`/chapter/${ch.id}#${sub.id}`}
+                        className="subchapter-link"
+                      >
                         {sub.id} {sub.title}
                       </Link>
                     </li>
                   ))}
                 </ul>
               )}
-
             </li>
           ))
         ) : (
