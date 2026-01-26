@@ -1,11 +1,15 @@
 const THEME_KEY = "app_theme";
 
-/**
- * Возможные значения:
- * - telegram (по умолчанию)
- * - light
- * - dark
- */
+{/* 
+  
+темы в интерфейсе:
+
+светлая
+темная
+автоматическая (в зависимости от темы в телеграм)
+
+*/}
+
 class ThemeSettings {
   static get() {
     return localStorage.getItem(THEME_KEY) || "telegram";
