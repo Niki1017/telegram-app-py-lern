@@ -15,7 +15,7 @@ function About() {
 
         <section className="about-info">
           <h2>Версия учебника</h2>
-          <p>{version}</p>
+          <p>{__APP_VERSION__}</p>
 
           <h2>Создатели проекта</h2>
           <ul>
