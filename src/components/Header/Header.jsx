@@ -5,7 +5,7 @@ import { TelegramService } from "../../services/telegram.service";
 
 import { Link } from "react-router-dom";
 
-function Header() {
+const Header = () => {
   const user = TelegramService.getUser();
   const isTelegram = TelegramService.isTelegram();
 

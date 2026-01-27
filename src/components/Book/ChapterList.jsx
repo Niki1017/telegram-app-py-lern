@@ -1,6 +1,7 @@
 import React from "react";
 
-function ChapterList({ chapters, onSelect }) {
+
+const ChapterList = ({ chapters, onSelect }) => {
   return (
     <aside className="chapter-list">
       <h2>Содержание</h2>

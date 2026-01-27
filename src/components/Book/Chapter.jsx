@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Chapter({ chapter }) {
+const Chapter = ({chapter}) => {
   const [currentStep, setCurrentStep] = useState(0);
 
   const step = chapter.steps[currentStep];

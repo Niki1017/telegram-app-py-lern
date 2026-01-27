@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import "./Settings.css";
 
-function Settings() {
+const Settings = () => {
   const [theme, setTheme] = useState(ThemeSettings.get());
 
   const changeTheme = (value) => {

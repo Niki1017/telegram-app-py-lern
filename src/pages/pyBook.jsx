@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import "./pyBook.css";
 
-function PyBook() {
+const PyBook = () => {
   const [search, setSearch] = useState("");
 
   const filteredChapters = chapters

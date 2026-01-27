@@ -4,7 +4,8 @@ import { chapters } from "../data/chapters";
 
 import "./ChapterPage.css";
 
-function ChapterPage() {
+const ChapterPage = () => {
+
   const { id } = useParams();
   const location = useLocation();
 
