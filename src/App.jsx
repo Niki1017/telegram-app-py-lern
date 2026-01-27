@@ -12,7 +12,7 @@ import About from "./pages/About";
 import { TelegramService } from "./services/telegram.service";
 import { applyTheme } from "./utils/applyTheme";
 
-function App() {
+const App = () => {
   useEffect(() => {
     // Инициализация Telegram WebApp (если открыто в Telegram)
     TelegramService.init();
